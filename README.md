@@ -41,7 +41,9 @@ dsa_assignment.exe  # On Windows
 
 Usage
 
-Run the program to see the menu:=== DSA Assignment Menu ===
+Run the program to see the menu:
+--- DSA Assignment Menu ---
+
 1. Generate random numbers
 2. Quick Sort
 3. Merge Sort

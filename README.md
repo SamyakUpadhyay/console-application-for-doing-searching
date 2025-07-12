@@ -29,14 +29,14 @@ Installation
 Clone the repository:git clone https://github.com/SamyakUpadhyay/console-application-for-doing-searching.git
 
 
-Navigate to the project directory:cd dsa-assignment
+Navigate to the project directory:cd console-application-for-doing-searching
 
 
-Compile the code:g++ -o dsa_assignment dsa_assignment.cpp
+Compile the code:g++ -o console search console application.cpp
 
 
-Run the executable:./dsa_assignment  # On Linux/Mac
-dsa_assignment.exe  # On Windows
+Run the executable:./console application  # On Linux/Mac
+console application.exe  # On Windows
 
 
 
@@ -73,7 +73,7 @@ Binary Search Index: 5
 Binary Search Time: 45 microseconds (0.045 milliseconds)
 
 Contributing
-Contributions are welcome! To contribute:
+Contributions are welcome!
 
 Fork the repository.
 Create a new branch (git checkout -b feature-branch).
@@ -82,7 +82,7 @@ Push to the branch (git push origin feature-branch).
 Open a pull request.
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
 
 Acknowledgments
 Inspired by standard DSA curricula (e.g., Cormen et al., Introduction to Algorithms).

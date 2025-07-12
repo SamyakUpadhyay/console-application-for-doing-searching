@@ -43,6 +43,7 @@ console application.exe  # On Windows
 Usage
 
 Run the program to see the menu:
+
 --- DSA Assignment Menu ---
 
 1. Generate random numbers

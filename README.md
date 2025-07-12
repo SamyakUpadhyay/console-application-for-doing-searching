@@ -1,5 +1,6 @@
 # console-application-for-doing-searching 
 DSA Assignment Repository
+
 This repository contains a C++ program implementing various Data Structures and Algorithms (DSA) techniques, including random number generation, sorting (Quick Sort and Merge Sort), and searching (Binary Search and Exponential Search). The code includes a menu-driven interface to demonstrate these algorithms with runtime measurements.
 Overview
 The program provides:

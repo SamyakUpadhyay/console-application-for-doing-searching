@@ -25,7 +25,7 @@ Basic terminal or IDE (e.g., Visual Studio Code, Code::Blocks).
 
 Installation
 
-Clone the repository:git clone https://github.com/SamyakUpadhyay/dsa-assignment.git
+Clone the repository:git clone https://github.com/SamyakUpadhyay/console-application-for-doing-searching.git
 
 
 Navigate to the project directory:cd dsa-assignment

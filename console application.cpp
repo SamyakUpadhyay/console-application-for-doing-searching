@@ -3,7 +3,10 @@
 #include <cstdlib>         // Include for random number generation
 #include <limits>          // Include for input buffer clearing
 #include <string>          // Include for string handling
-using namespace std;       // Use standard namespace for simplicity
+#include <algorithm>       // Include for std::min
+#include <time.h>          // Include for time function
+
+using namespace std;
 
 // Generate N random integers between 0 and 999
 void generateRandomNumbers(int arr[], int n) {
@@ -120,7 +123,7 @@ int exponentialSearch(int arr[], int n, int tar) {
     while (i < n && arr[i] <= tar) { // Double range until target exceeded
         i *= 2;
     }
-    int bound = min(i, n - 1); // Bound within array size
+    int bound = std::min(i, n - 1); // Bound within array size
     return binarySearch(arr, i / 2, bound, tar); // Binary search in range
 }
 
@@ -216,9 +219,9 @@ void menu() {
                 int* temp = new int[n];
                 copyArray(arr, temp, n);
                 mergeSort(temp, 0, n - 1); // Sort for binary search
-                auto before = std::chrono::high_resolution_clock::now();
+                auto before = std::chrono::high_resolution_clock::now(); // Start time
                 index = binarySearch(temp, 0, n - 1, target);
-                auto after = std::chrono::high_resolution_clock::now();
+                auto after = std::chrono::high_resolution_clock::now(); // End time
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(after - before);
                 cout << "Binary Search Index: " << (index == -1 ? "Not Found" : to_string(index)) << endl;
                 cout << "Binary Search Time: " << duration.count() << " microseconds (" 
@@ -242,9 +245,9 @@ void menu() {
                 int* temp = new int[n];
                 copyArray(arr, temp, n);
                 mergeSort(temp, 0, n - 1); // Sort for exponential search
-                auto before = std::chrono::high_resolution_clock::now();
+                auto before = std::chrono::high_resolution_clock::now(); // Start time
                 index = exponentialSearch(temp, n, target);
-                auto after = std::chrono::high_resolution_clock::now();
+                auto after = std::chrono::high_resolution_clock::now(); // End time
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(after - before);
                 cout << "Exponential Search Index: " << (index == -1 ? "Not Found" : to_string(index)) << endl;
                 cout << "Exponential Search Time: " << duration.count() << " microseconds (" 

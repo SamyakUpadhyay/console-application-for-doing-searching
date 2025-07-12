@@ -182,7 +182,8 @@ void menu() {
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(after - before);
                 cout << "Sorted Array (Quick Sort): ";
                 displayArray(temp, n);
-                cout << "Quick Sort Time: " << duration.count() / 1000000.0 << " seconds\n";
+                cout << "Quick Sort Time: " << duration.count() << " microseconds (" 
+                     << duration.count() / 1000000.0 << " seconds)\n";
                 delete[] temp;         // Free temporary array
                 break;
             }
@@ -197,9 +198,10 @@ void menu() {
                 mergeSort(temp, 0, n - 1);
                 auto after = std::chrono::high_resolution_clock::now();
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(after - before);
-                cout << "Merge Sort Time: " << duration.count() / 1000000.0 << " seconds\n";
                 cout << "Sorted Array (Merge Sort): ";
                 displayArray(temp, n);
+                cout << "Merge Sort Time: " << duration.count() << " microseconds (" 
+                     << duration.count() / 1000000.0 << " seconds)\n";
                 delete[] temp;
                 break;
             }
@@ -225,7 +227,7 @@ void menu() {
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(after - before);
                 cout << "Binary Search Index: " << (index == -1 ? "Not Found" : to_string(index)) << endl;
                 cout << "Binary Search Time: " << duration.count() << " microseconds (" 
-                     << duration.count() / 1000.0 << " milliseconds)\n";
+                     << duration.count() / 1000000.0 << " seconds)\n";
                 delete[] temp;
                 break;
             }
@@ -251,7 +253,7 @@ void menu() {
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(after - before);
                 cout << "Exponential Search Index: " << (index == -1 ? "Not Found" : to_string(index)) << endl;
                 cout << "Exponential Search Time: " << duration.count() << " microseconds (" 
-                     << duration.count() / 1000.0 << " milliseconds)\n";
+                     << duration.count() / 1000000.0 << " seconds)\n";
                 delete[] temp;
                 break;
             }
